@@ -1,1 +1,56 @@
+public class Point {
+		int x,y;
+		
+		public Point(int m, int n) {
+			x=m;
+			y=n;
+		}
+		
+		public void acceptValues() {
+			System.out.println("values of x and y are:" + x +" "+ y);
+		}
+		
+		public String getDetails()
+		{
+		   return "Point ("+x+","+y+")";
+		}
+		
+		public boolean isEqual(String p1, String p2) {
+			if(p1.equals(p2)) {
+				return true;
+			}
+				return false;
+		}	
+		
+}
+
+
+import java.util.Scanner;
+
+public class Point2D {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		//reading user input using scanner
+	     System.out.println("enter x value");
+	     int x=s.nextInt();
+	     System.out.println("enter y value");
+	     int y=s.nextInt();
+	     
+	     //parameterized constructor
+	    Point p1=new Point(10,20);
+				p1.acceptValues();
+				
+		Point p2=new Point(80,90);
+				p2.acceptValues();
+				
+				//to display point details
+				System.out.println(p1.getDetails());
+				System.out.println(p2.getDetails());
+				
+		//comparing p1 and p2
+		System.out.println("comparision of p1 and p2"+" "+ p1.equals(p2));
+		
+	}
+}
 
